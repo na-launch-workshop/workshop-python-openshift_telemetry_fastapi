@@ -1,0 +1,8 @@
+site_name: Using Red Hat build of OpenTelemetry - Python
+site_description: Using Red Hat build of OpenTelemetry - Python
+
+nav:
+  - Overview: index.md
+
+plugins:
+  - techdocs-core

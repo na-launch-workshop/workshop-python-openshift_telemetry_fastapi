@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: workshop-opentelemetry-python
+  title: Using Red Hat build of OpenTelemetry - Python
+  description: |
+    Using Red Hat build of OpenTelemetry
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - opentelemetry
+    - python
+spec:
+  type: module
+  lifecycle: production
+  owner: group:default/workshop-admins
+  subcomponentOf: component:default/workshop-repository
