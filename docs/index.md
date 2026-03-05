@@ -11,7 +11,7 @@
 
 We will explore the Kubernetes Sidecar design pattern which deploys an agent sidecar container within an application pod that sends traces to a centralized Grafana Tempo. The application will send tracing data to a collector agent (sidecar) that offloads responsibility by sending the data to a storage backend, in our case, the central Grafana Tempo instance.
 
-Instrumentation is the process of adding observability code to an application. Auto instrumentation creates this tracing framework without significant code changes by automatically injecting and configuring auto-instrumentation libraries in a variety of supported languages. Auto instrumentation of .NET sends data on port 4318 via the OTLP/HTTP protocol.
+Instrumentation is the process of adding observability code to an application. Auto instrumentation creates this tracing framework without significant code changes by automatically injecting and configuring auto-instrumentation libraries in a variety of supported languages. Auto instrumentation of Python sends data on port 4318 via the OTLP/HTTP protocol.
 
 Inside your workspace is a Python Application that listens at `/api/check` for web requests and returns an HTTP 200 or 500 status code based on the payload.
 
@@ -41,7 +41,7 @@ From the Terminal, deploy the Python Application in your project using:
   oc apply -f manifests/instrumentation.yaml
   ```
 
-3. Configure your deployment with annotations for .NET auto instrumentation:
+3. Configure your deployment with annotations for Python auto instrumentation:
 
   ```sh
   oc edit deployment workshop-<your username>
